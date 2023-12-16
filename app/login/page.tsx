@@ -21,6 +21,7 @@ const Login = () => {
 
       if (res?.error) {
         setError("Invalid Credentials");
+        console.log(error);
         return;
       }
 
