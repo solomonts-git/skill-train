@@ -1,113 +1,135 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+import train from "@/public/images/train.png";
+import connect from "@/public/images/connect.png";
+import develop from "@/public/images/develop.jpeg";
+import empower from "@/public/images/empower.png";
+
+import hawassalogo from "@/public/images/hawassalogo.jpeg";
+import infolinklogo from "@/public/images/infolinklogo.jpeg";
+import polytechniclogo from "@/public/images/polytechniclogo.jpeg";
+import childrenorg from "@/public/images/childrenorg.jpeg";
+import selamlogo from "@/public/images/selamlogo.jpeg";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <main className="flex  min-h-screen flex-col items-center w-full justify-between py-4 px-4 md:px-24">
+        <div className="z-10 mt-4 h-[500px] w-full text-black">
+          <Slider />
+          {/* <Image src={herosection} alt="hero" /> */}
         </div>
-      </div>
+        {/* Works to be performed */}
+        <div className="flex my-20">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <div className="flex flex-col h-60 hover:scale-105 shadow-slate-200 dark:shadow-gray-950 shadow-md rounded-md overflow-hidden">
+              <Image src={train} alt="Train" className="h-3/4" />
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="font-mono font-bold hover:scale-110 ease-linear pt-3">
+                  Training
+                </h1>
+                {/* <p className="px-2">Training youth's</p> */}
+              </div>
+            </div>
+            <div className="flex flex-col h-60 hover:scale-105 shadow-slate-200 dark:shadow-gray-950 shadow-md rounded-md overflow-hidden">
+              <Image src={connect} alt="Train" className="h-3/4" />
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="font-mono font-bold hover:scale-110 ease-linear pt-3">
+                  Connect
+                </h1>
+                {/* <p className="px-2">creating Employee with Employer</p> */}
+              </div>
+            </div>
+            <div className="flex flex-col h-60 hover:scale-105 shadow-slate-200 dark:shadow-gray-950 shadow-md rounded-md overflow-hidden">
+              <Image src={empower} alt="Train" className="h-3/4" />
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="font-mono font-bold hover:scale-110 ease-linear pt-3">
+                  Empower
+                </h1>
+                {/* <p className="px-2">Giving new skills for disadvantged group</p> */}
+              </div>
+            </div>
+            <div className="flex flex-col h-60 hover:scale-105 shadow-slate-200 dark:shadow-gray-950 shadow-md rounded-md overflow-hidden">
+              <Image src={develop} alt="Train" className="h-3/4" />
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="font-mono font-bold hover:scale-110 ease-linear pt-3">
+                  Develop
+                </h1>
+                {/* <p className="px-2">trining youth's</p> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end of works to be performed */}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        {/* In collaboration with */}
+        <div className="hidden md:flex flex-col items-center justify-center w-full my-12">
+          <h1 className="font-semibold font-mono text-5xl dark:text-slate-100 text-slate-900">
+            In Collaboration with
+          </h1>
+          <div className="flex justify-around pt-5 w-full ">
+            <Image
+              className="w-60 h-20 mx-3 rounded-lg"
+              src={hawassalogo}
+              alt="Hawassa University"
+            />
+            <Image
+              className="w-60 h-20 mx-3 rounded-lg"
+              src={infolinklogo}
+              alt="Infolink University college"
+            />
+            <Image className="w-80 h-20" src={selamlogo} alt="Selam Logo" />
+            <Image
+              className="w-60 h-20 mx-3 rounded-lg"
+              src={childrenorg}
+              alt="Tabor Hawassa children organization"
+            />
+            <Image
+              className="w-60 h-20 mx-3 rounded-lg"
+              src={polytechniclogo}
+              alt="polytechnic  University"
+            />
+          </div>
+        </div>
+        {/* Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 my-10">
+          <div className="w-full rounded-md overflow-hidden h-80 ease-in-out hover:scale-105 shadow-sm dark:shadow-slate-950 shadow-slate-200">
+            <h1 className="px-4 text-2xl font-semibold">Mission</h1>
+            <p className="px-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+          <div className="w-full rounded-md overflow-hidden h-80 ease-in-out hover:scale-105 shadow-sm dark:shadow-slate-950 shadow-slate-200">
+            <h1 className="px-4 text-2xl font-semibold">Vision</h1>
+            <p className="px-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
