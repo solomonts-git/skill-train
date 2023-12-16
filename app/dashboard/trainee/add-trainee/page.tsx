@@ -157,7 +157,7 @@ const AddTrainee = () => {
             className="p-5 md:mr-4 mb-2 w-full text-slate-950 focus:outline-none rounded-md font-mono font-semibold"
           >
             <option value="">Select trainer Organization</option>
-            {partners.map((p: Partner) => (
+            {partners.map((p: PartnerT) => (
               <option key={p._id} value={p._id}>
                 {p.organizationname}
               </option>
