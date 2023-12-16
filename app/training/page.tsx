@@ -46,7 +46,10 @@ const Training = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
         {data.length ? (
           data.map((dt: Trainings) => (
-            <div className="flex flex-col items-start justify-center overflow-hidden rounded-md shadow-md dark:shadow-slate-950 shadow-slate-200">
+            <div
+              key={dt._id}
+              className="flex flex-col items-start justify-center overflow-hidden rounded-md shadow-md dark:shadow-slate-950 shadow-slate-200"
+            >
               <Image
                 src={`/${dt.imagePath}`}
                 alt="cusine "
