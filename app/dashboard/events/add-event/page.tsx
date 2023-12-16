@@ -132,7 +132,7 @@ const AddEvent = () => {
             onChange={(e) => setOrganizer(e.target.value)}
           >
             <option>Select Organizer Organization</option>
-            {partners.map((p: Partner) => (
+            {partners.map((p: PartnerT) => (
               <option key={p._id} value={p._id}>
                 {p.organizationname}
               </option>
